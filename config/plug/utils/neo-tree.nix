@@ -1,29 +1,28 @@
 {
-  plugins.neo-tree = {
-    enable = true;
-    #renderer.icons.webdevColors = false;
-    /*
-      buffers.window.mappings = {
-        "l" = "open";
-        "h" = "close_node";
-        "<space>" = "none";
-      };
-    */
-  };
+	plugins.neo-tree = {
+		enable = true;
+		enableGitStatus = false;
+		window.position = "left";
+		window.width = 30;
+		buffers.window.mappings = {
+			"<space>" = "open";
+			"h" = "close_node";
+		};
+	};
 
-  keymaps = [
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>e";
-      action = ":Neotree<CR>";
-      options = {
-        silent = true;
-        desc = "Tree";
-      };
-    }
-  ];
+	keymaps = [
+		{
+			mode = [
+				"n"
+				"v"
+			];
+			key = "<leader>e";
+			action = ":set autochdir<CR> :Neotree<CR>";
+			options = {
+				silent = true;
+				desc = "Tree";
+			};
+		}
+	];
 
 }
