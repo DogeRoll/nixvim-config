@@ -21,63 +21,7 @@ If you add a new configuration file, remember to add it to the [`config/default.
 
 ### Current plugins
 
-### Current plugins
-
-- **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
-
-- **[completion/](../config/plug/completion)**
-
-  - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim
-  - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
-
-- **[git/](../config/plug/git)**
-
-  - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers
-  - **[gitpad](../config/plug/git/gitpad.nix):** Provides minimal per-Project/File/Branch note taking
-
-- **[lsp/](../config/plug/lsp)**
-
-  - **[fidget](../config/plug/lsp/fidget.nix):** LSP progress notifications
-  - **[lsp](../config/plug/lsp/lsp.nix):** LSP configs
-  - **[lspsaga](../config/plug/lsp/lspsaga.nix):** Cool LSP features
-  - **[none-ls](../config/plug/lsp/none-ls.nix):** null-ls replacement. Use nvim as LSP
-  - **[clangd-extensions](../config/plug/lsp/clangd-extensions.nix):** Inlay hints and much more
-
-- **[snippet/](../config/plug/snippet)**
-
-  - **[luasnip](../config/plug/snippet/luasnip.nix):** Snippet engine in lua
-
-- **[statusline/](../config/plug/statusline)**
-
-  - **[lualine](../config/plug/statusline/lualine.nix):** Status line for neovim
-
-- **[treesitter/](../config/plug/treesitter)**
-
-  - **[treesitter-context](../config/plug/treesitter/treesitter-context.nix):** Show code context
-  - **[treesitter-textobject](../config/plug/treesitter/treesitter-textobject.nix):** Allow cool text manipulation thanks to TS
-  - **[treesitter](../config/plug/treesitter/treesitter.nix):** Parser generator tool to build a syntax tree of the current buffer
-
-- **[ui/](../config/plug/ui)**
-
-  - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode-like line for buffers
-  - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
-  - **[web-devicons](../config/plug/ui/web-devicons.nix):** Adds file type icons
-  - **[smear.nix](../config/plug/ui/smear.nix):** Cool cursor animation
-  - **[ufo.nix](../config/plug/ui/ufo.nix):** Folds
-  - **[colorizer.nix](../config/plug/ui/colorizer.nix):** Renders color codes.
-  - **[illuminate.nix](../config/plug/ui/illuminate.nix):** Highlights all occurrences of word under cursor in buffer.
-  - **[markview.nix](../config/plug/ui/markview.nix):** Renders markdown in place, for note-taking.
-
-- **[utils/](../config/plug/utils)**
-
-  - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
-  - **[smart-splits](../config/plug/ui/smart-splits.nix):** Resize splits more intelligently
-  - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
-  - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
-  - **[whichkey](../config/plug/utils/whichkey.nix):** Popup to display keybindings
-  - **[trouble](../config/plug/utils/trouble.nix):** Pretty interface for working with LSP
-  - **[neo-tree](../config/plug/utils/neo-tree.nix):** File explorer tree
-
+### Current plugins are listed inside [`config/default.nix`](../config/default.nix) file.
 
 If you have nix installed, you can directly run my config from anywhere:
 
