@@ -25,15 +25,15 @@
 			number = true;
 			relativenumber = true;
 
-			# Set tabs to 2 chars
-			tabstop = 4;
-			softtabstop = 4;
-			showtabline = 4;
+			# Set tabs to 8 chars
+			tabstop = 8;
+			shiftwidth = 8;
+			softtabstop = 0;
 			expandtab = false;
 
+			showtabline = 2;
 			# Enable auto indenting
 			smartindent = true;
-			shiftwidth = 4;
 
 			# Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
 			breakindent = true;
@@ -66,10 +66,11 @@
 				"menuone"
 				"noselect"
 				"noinsert"
-			]; # mostly just for cmp
+			];
 
 			# Enable persistent undo history
 			swapfile = false;
+			autoread = true;
 			backup = false;
 			undofile = true;
 			#autochdir = true;
@@ -79,7 +80,7 @@
 			termguicolors = true;
 
 			# Enable the sign column to prevent the screen from jumping
-			# signcolumn = "yes";
+			signcolumn = "yes";
 
 			# Enable cursor line highlight
 			cursorline = true; # Highlight the line where the cursor is located
@@ -91,6 +92,7 @@
 			foldlevel = 99;
 			foldlevelstart = 99;
 			foldenable = true;
+			foldmethod = "indent";
 
 			# Always keep 10 lines above/below cursor unless at start/end of file
 			scrolloff = 10;

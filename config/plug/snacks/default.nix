@@ -5,7 +5,6 @@
 		settings = {
 			bufdelete.enabled = true;
 			input.enabled = true;
-			term.enabled = true;
 			scroll.enabled = true;
 			animate.enabled = true;
 		};
@@ -13,10 +12,19 @@
 
 	imports = [
 		./dashboard.nix
-		./gitbrowse.nix
 		./indent.nix
 		./lazygit.nix
-		./notifier.nix
 		./picker.nix
+	];
+
+	keymaps = [
+		{
+			mode = "n"; key = "<leader>bs"; action = ":lua Snacks.scratch()<cr>";
+			options = { noremap = true; desc = "Scratch buffer"; };
+		}
+		{
+			mode = "n"; key = "<leader>bs"; action = ":lua Snacks.scratch().select()<cr>";
+			options = { noremap = true; desc = "Scratch buffer"; };
+		}
 	];
 }

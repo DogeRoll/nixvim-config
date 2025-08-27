@@ -28,54 +28,6 @@ in
 				fg = "#424242";
 			};
 
-			FzfLuaBorder = {
-				fg = colors.base01;
-				bg = colors.base01;
-			};
-
-			FzfLuaPromptNormal = {
-				fg = "none";
-				bg = colors.base01;
-			};
-
-			FzfLuaPromptPrefix = {
-				fg = colors.base08;
-				bg = colors.base01;
-			};
-
-			FzfLuaSelection = {
-				fg = "none";
-				bg = colors.base01;
-			};
-
-			FzfLuaScrollFloatEmpty = {
-				fg = "none";
-				bg = colors.base01;
-			};
-
-			FzfLuaSrollFloatFull = {
-				fg = "none";
-				bg = colors.base01;
-			};
-
-			TelescopePromptBorder = {
-				fg = colors.base01;
-				bg = colors.base01;
-			};
-			TelescopePromptNormal = {
-				fg = "none";
-				bg = colors.base01;
-			};
-			TelescopePromptPrefix = {
-				fg = colors.base08;
-				bg = colors.base01;
-			};
-
-			TelescopeSelection = {
-				fg = "none";
-				bg = colors.base01;
-			};
-
 			Pmenu = {
 				fg = "none";
 				bg = colors.base01;
@@ -156,7 +108,7 @@ in
 				fg = colors.base0D;
 			};
 			TSCharacter = {
-				fg = colors.base0D;
+				fg = colors.base0B;#base0D;
 			};
 			TSComment = {
 				fg = colors.base03;
@@ -166,19 +118,19 @@ in
 				fg = colors.base09;
 			};
 			TSConstant = {
-				fg = colors.base0D;
+				fg = colors.base0C;
 			};
 			TSConstBuiltin = {
-				fg = colors.base0D;
+				fg = colors.base0E;#base0D;
 			};
 			TSConstMacro = {
-				fg = colors.base0B;
+				fg = colors.base0D;
 			};
 			TSConstructor = {
 				fg = colors.base0D;
 			};
 			TSException = {
-				fg = colors.base03;
+				fg = colors.base08;#base03;
 			};
 			TSField = {
 				fg = colors.base08;
@@ -193,7 +145,7 @@ in
 				fg = colors.base0C;
 			};
 			TSFuncMacro = {
-				fg = colors.base0B;
+				fg = colors.base0D;
 			};
 			TSInclude = {
 				fg = colors.base08;
@@ -229,7 +181,7 @@ in
 				fg = colors.base08;
 			};
 			TSProperty = {
-				fg = colors.base08;
+				fg = colors.base05;
 			};
 			TSPunctDelimiter = {
 				fg = colors.base05;
@@ -262,7 +214,7 @@ in
 				fg = colors.base0D;
 			};
 			TSTagAttribute = {
-				fg = colors.base08;
+				fg = colors.base0B;#base08;
 			};
 			TSTagDelimiter = {
 				fg = colors.base05;
@@ -326,7 +278,9 @@ in
 			TSVariableBuiltin = {
 				fg = colors.base0D;
 			};
-
+			"@lsp.mod.defaultLibrary.rust" = {
+				fg = colors.base0C;
+			};
 		};
 	};
 }

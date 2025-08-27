@@ -1,9 +1,6 @@
 {self, ...}:
 {
 	plugins = {
-		lsp-format = {
-			enable = false;
-		};
 		lsp = {
 			enable = true;
 			inlayHints = false;
@@ -14,7 +11,7 @@
 					cmd = [
 						"clangd"
 						"--clang-tidy"
-						#"--inlay-hints"
+						"--inlay-hints"
 						"--background-index"
 						"--completion-style=detailed"
 						"--function-arg-placeholders=true"
@@ -26,18 +23,35 @@
 						"--pch-storage=memory"
 						"--suggest-missing-includes"
 					];
+					extraOptions = {
+						settings = {
+							clangd = {
+								InlayHints = {
+									Enabled = true;
+									ParameterNames = true;
+									DeducedTypes = true;
+									Designators = true;
+								};
+							};
+						};
+					};
 				};
-				cmake = {
-					enable = true;
-				};
-				dts_lsp = {
-					enable = false;
-					package = null;
-				};
-				bashls = {
-					enable = true;
-					autostart = false;
-				};
+				#rust_analyzer = {
+				#	enable = false;
+				#	installRustc = false;
+				#	installCargo = false;
+				#};
+				#cmake = {
+				#	enable = false;
+				#};
+				#dts_lsp = {
+				#	enable = false;
+				#	package = null;
+				#};
+				#bashls = {
+				#	enable = true;
+				#	autostart = false;
+				#};
 			};
 			keymaps = {
 				silent = true;
@@ -58,10 +72,10 @@
 						action = "implementation";
 						desc = "Goto Implementation";
 					};
-					gT = {
-						action = "type_definition";
-						desc = "Type Definition";
-					};
+					#gT = {
+					#	action = "type_definition";
+					#	desc = "Type Definition";
+					#};
 					K = {
 						action = "hover";
 						desc = "Hover";
@@ -70,10 +84,10 @@
 						action = "workspace_symbol";
 						desc = "Workspace Symbol";
 					};
-					"<leader>cr" = {
-						action = "rename";
-						desc = "Rename";
-					};
+					#"<leader>cr" = {
+					#	action = "rename";
+					#	desc = "Rename";
+					#};
 				};
 				diagnostic = {
 					"<leader>cd" = {
@@ -114,6 +128,5 @@
 	require('lspconfig.ui.windows').default_options = {
 		border = _border
 	}
-
 	'';
 }

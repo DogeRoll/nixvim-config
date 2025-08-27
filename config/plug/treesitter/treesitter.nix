@@ -2,7 +2,7 @@
 {
 	plugins.treesitter = {
 		enable = true;
-
+		folding = true;
 		settings = {
 			indent = {
 				enable = true;
@@ -12,22 +12,34 @@
 			};
 			ensureInstalled = [
 				"c"
+				"make"
+				"bash"
+				"diff"
+				"kconfig"
 				"cpp"
 				"cmake"
-				"make"
-				"devicetree"
 				"lua"
 				"nix"
-				"bash"
-				"doxygen"
 				"markdown"
 				"markdown_inline"
+				"doxygen"
 			];
 		};
 
-		folding = true;
-		nixvimInjections = true;
-		grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
+		grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+			c
+			make
+			bash
+			diff
+			kconfig
+			cpp
+			cmake
+			lua
+			nix
+			markdown
+			markdown_inline
+			doxygen
+		];
 	};
 
 }

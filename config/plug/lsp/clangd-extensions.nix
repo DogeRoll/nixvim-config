@@ -23,6 +23,9 @@
             templateTemplateParm = "";
             templateParamObject = "";
           };
+          highlights = {
+            detail = "NeoTreeFadeText1";
+        };
         };
       };
     };

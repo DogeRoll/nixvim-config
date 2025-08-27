@@ -6,7 +6,7 @@ in
 	colorschemes = {
 		base16 = {
 			enable = true;
-			setUpBar = false;
+			setUpBar = true;
 			colorscheme = import ../../colors/${config.theme}.nix { };
 			settings = {
 				cmp = true;
@@ -18,6 +18,7 @@ in
 				telescope_borders = false;
 				lazygit = true;
 				neotree = true;
+				ts_rainbow = true;
 			};
 		};
 		oxocarbon.enable = false;

@@ -84,7 +84,7 @@ in
 				lualine_b = [
 					{
 						__unkeyed = "branch";
-						icon.__unkeyed = "";
+						icon.__unkeyed = "";
 						color = {
 							fg = colors.base04;
 							bg = colors.base00;
@@ -99,22 +99,6 @@ in
 					}
 				];
 				lualine_c = [
-					#					{
-					#						__unkeyed = "breadcrumbs";
-					#						color = {
-					#							fg = colors.base04;
-					#							bg = colors.base00;
-					#						};
-					#						separator.left = "";
-					#						separator.right = "";
-					#						__raw = ''
-					#							{
-					#								function()
-					#									require('lspsaga.symbol.winbar').get_bar()
-					#								end
-					#							}
-					#						'';
-					#					}
 					{
 						__unkeyed = "diagnostic";
 						symbols = {

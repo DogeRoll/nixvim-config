@@ -9,11 +9,10 @@
 		sources = {
 			code_actions = {
 				gitsigns.enable = false;
-				statix.enable = true;
 			};
 			diagnostics = {
 				cppcheck = {
-					enable = true;
+					enable = false;
 					settings = {
 						disabled_filetypes = [
 							"h"
@@ -21,7 +20,7 @@
 						];
 						extra_args = [
 							"--enable=all"
-							#"--check-level=exhaustive"
+							"--check-level=exhaustive"
 							"--template=gcc"
 							"--inline-suppr"
 							"--suppress=missingIncludeSystem,checkersReport"
@@ -34,10 +33,6 @@
 				};
 			};
 			formatting = {
-				nixfmt = {
-					enable = true;
-					package = pkgs.nixfmt-rfc-style;
-				};
 				clang_format = {
 					enable = true;
 					settings = {
@@ -47,23 +42,13 @@
 						];
 					};
 				};
-				shfmt.enable = true;
-				stylua.enable = true;
 			};
 		};
 	};
 	keymaps = [
 		{
-			mode = [
-				"n"
-				"v"
-			];
-			key = "<leader>cf";
-			action = "<cmd>lua vim.lsp.buf.format()<cr>";
-			options = {
-				silent = true;
-				desc = "Format";
-			};
+			mode = [ "n" "v" ]; key = "<leader>cf"; action = "<cmd>lua vim.lsp.buf.format()<cr>";
+			options = { silent = true; desc = "Format"; };
 		}
 	];
 }

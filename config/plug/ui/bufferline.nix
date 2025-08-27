@@ -128,15 +128,6 @@ in
 			};
 		}
 
-		# {
-		#   mode = "n";
-		#   key = "<leader>`";
-		#   action = "<cmd>e #<cr>";
-		#   options = {
-		#     desc = "Switch to Other Buffer";
-		#   };
-		# }
-
 		{
 			mode = "n";
 			key = "<leader>br";

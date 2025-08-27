@@ -26,7 +26,7 @@ in
 							icon = " ";
 							key = "f";
 							desc = "Find File";
-							action = "<leader>ff";
+							action = ":lua Snacks.picker.files()<cr>"
 						}
 						{
 							icon = " ";
@@ -38,19 +38,13 @@ in
 							icon = " ";
 							key = "/";
 							desc = "Find Text";
-							action = "<leader>fr";
-						}
-						{
-							icon = " ";
-							key = "s";
-							desc = "Restore Session";
-							action = ":lua require(\"persistence\").select()";
+							action = ":lua Snacks.picker.grep()<cr>";
 						}
 						{
 							icon = " ";
 							key = "r";
 							desc = "Recent Files";
-							action = "<leader>fg";
+							action = ":lua Snacks.picker.recent()<cr>";
 						}
 						{
 							icon = "";
