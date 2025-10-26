@@ -29,7 +29,11 @@
 		./plug/ui/illuminate.nix
 		./plug/ui/markview.nix
 		./plug/ui/ufo.nix
+		./plug/ui/dap-ui.nix
+		./plug/ui/dap-virtual-text.nix
 		# Utility Plugins
+		./plug/utils/dap.nix
+		./plug/utils/lz-n.nix
 		./plug/utils/sleuth.nix
 		./plug/utils/smart-splits.nix
 		./plug/utils/comment.nix

@@ -8,7 +8,7 @@
 				owner = "pohlrabi404";
 				repo = "compile.nvim";
 				rev = "main";
-				hash = "sha256-6GuJ5v7SMzW7ras0IhnipOEoSpKUOUpPvb/j7X+EOQA=";
+				hash = "sha256-DE1aWdIY+DxraVAuA0aU3qL6BtGyUWrobdzTcSoYjK4=";
 			};
 		})
 	];

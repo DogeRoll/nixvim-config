@@ -38,7 +38,7 @@
 		{
 			event = "FileType";
 			pattern = [ "c" "h"];
-			command = "set tags=./tags,tags,/opt/toolchains/zephyr/tags;";
+			command = "set tags=./tags,tags,/opt/toolchains/zephyr/tags,/home/wired/esp/esp-idf/tags;";
 		}
 
 		{
@@ -60,6 +60,11 @@
 				local include_guard = "__" .. filename .. "_H__"
 				local boilerplate = string.format(
 				[[
+/**
+  * @file
+  * @brief
+  */
+/* vim: set noet tw=8 sw=8: */
 #if !defined(%s)
 #define %s 1
 
@@ -111,6 +116,11 @@ extern "C" {
 			callback = {__raw = ''
 				function()
 				local boilerplate = [[
+/**
+  * @file
+  * @brief
+  */
+/* vim: set noet tw=8 sw=8: */
 /**********************************************************
 * Include files
 **********************************************************/
@@ -183,6 +193,11 @@ extern "C" {
 
 			if kind == "hpp" then
 				return string.format([[
+/**
+  * @file
+  * @brief
+  */
+/* vim: set noet tw=8 sw=8: */
 #pragma once /* %s */
 
 #ifdef USE_PCH
@@ -196,18 +211,30 @@ extern "C" {
 %s
 ]], filename, namespace_open, namespace_close)
 			elseif kind == "cpp" then
+				local include_line = ""
+				if filename ~= "main" then
+					include_line = string.format('#include "%s.hpp"\n', filename)
+				else
+					namespace_open = ""
+					namespace_close = ""
+				end
 				return string.format([[
+/**
+  * @file
+  * @brief
+  */
+/* vim: set noet tw=8 sw=8: */
 #ifdef USE_PCH
 
 #else
 
 #endif
-#include "%s.hpp"
-
 %s
 
 %s
-]], filename, namespace_open, namespace_close)
+
+%s
+]], include_line, namespace_open, namespace_close)
 			end
 		end
 

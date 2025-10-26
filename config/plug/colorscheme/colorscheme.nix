@@ -19,6 +19,7 @@ in
 				lazygit = true;
 				neotree = true;
 				ts_rainbow = true;
+				dapui = true;
 			};
 		};
 		oxocarbon.enable = false;

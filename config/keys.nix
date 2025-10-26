@@ -90,6 +90,12 @@
 			mode = [ "n" "v" ]; key = "<leader>D"; action = ''"_d'';
 			options = { desc = "Delete to void register"; };
 		}
+		# Yank all matches to system clipboard
+		{
+			mode = "n"; key = "<leader>fy";
+			action = ":let @+ = '''' | g//y A | call setreg('+', @a)<CR>";
+			options = { desc = "Yank all matches to +"; };
+		}
 		# <C-c> instead of pressing esc just because
 		{
 			mode = "i"; key = "<C-c>"; action = "<Esc>";

@@ -8,10 +8,10 @@ let
 		''
 		#!/usr/bin/env sh
 		echo -e "
-     ┓  •   •     ┓        •		
-┏┓┏┓┏┫  ┓┏  ┓┏┓  ╋┣┓┏┓  ┓┏┏┓┏┓┏┓	
-┗┫┗┛┗┻  ┗┛  ┗┛┗  ┗┛┗┗   ┗┻┛┗┛ ┗		
- ┛									
+	     ┓  •   •     ┓        •		
+	┏┓┏┓┏┫  ┓┏  ┓┏┓  ╋┣┓┏┓  ┓┏┏┓┏┓┏┓	
+	┗┫┗┛┗┻  ┗┛  ┗┛┗  ┗┛┗┗   ┗┻┛┗┛ ┗		
+	 ┛									
 "
 	'';
 in
@@ -26,7 +26,7 @@ in
 							icon = " ";
 							key = "f";
 							desc = "Find File";
-							action = ":lua Snacks.picker.files()<cr>"
+							action = ":lua Snacks.picker.files()";
 						}
 						{
 							icon = " ";
@@ -38,13 +38,13 @@ in
 							icon = " ";
 							key = "/";
 							desc = "Find Text";
-							action = ":lua Snacks.picker.grep()<cr>";
+							action = ":lua Snacks.picker.grep()";
 						}
 						{
 							icon = " ";
 							key = "r";
 							desc = "Recent Files";
-							action = ":lua Snacks.picker.recent()<cr>";
+							action = ":lua Snacks.picker.recent()";
 						}
 						{
 							icon = "";
@@ -97,9 +97,7 @@ in
 						icon = " ";
 						title = "Git Status";
 						section = "terminal";
-						enabled.__raw = ''
-			  Snacks.git.get_root() ~= nil
-			  '';
+						enabled.__raw = '' Snacks.git.get_root() ~= nil '';
 						cmd = "${pkgs.hub}/bin/hub status --short --branch --renames";
 						height = 5;
 						padding = 1;

@@ -8,6 +8,11 @@
 				clangd = {
 					enable = true;
 					autostart = true;
+					settings.init_options = {
+						usePlaceholders = true;
+						completeUnimported = true;
+						clangdFileStatus = true;
+					};
 					cmd = [
 						"clangd"
 						"--clang-tidy"
@@ -36,11 +41,11 @@
 						};
 					};
 				};
-				#rust_analyzer = {
-				#	enable = false;
-				#	installRustc = false;
-				#	installCargo = false;
-				#};
+				rust_analyzer = {
+					enable = false;
+					installRustc = false;
+					installCargo = false;
+				};
 				#cmake = {
 				#	enable = false;
 				#};
