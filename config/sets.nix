@@ -118,6 +118,7 @@
 			spell = false;
 			# Clipboard provider
 			#clipboard.providers.wl-copy.enable = true;
+			clipboard = "unnamedplus";
 			list = true;
 			listchars = {
 				tab = " ";
