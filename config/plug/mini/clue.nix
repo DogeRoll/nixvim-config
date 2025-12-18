@@ -43,6 +43,7 @@
       { mode = "n"; keys = "<Leader>c"; desc = "+code"; }
       { mode = "n"; keys = "<Leader>x"; desc = "+trouble"; }
       { mode = "n"; keys ="<Leader>d"; desc="+debug";}
+      { mode = "n"; keys ="<Leader>t"; desc="+terminal";}
       { __raw = "require('mini.clue').gen_clues.builtin_completion()"; }
       { __raw = "require('mini.clue').gen_clues.g()"; }
       { __raw = "require('mini.clue').gen_clues.marks()"; }

@@ -13,6 +13,7 @@ in
     plugins.snacks = {
 	settings = {
 	    picker = {
+		enabled = true;
 		exclude = [ ".git" "build/*" "impl101/*" "impl99/*" "impl91/*" "impl87/*" "router/*" "doc/*" "staging_dir/*" ];
 		actions.__raw = ''require("trouble.sources.snacks").actions'';
 		matcher = {

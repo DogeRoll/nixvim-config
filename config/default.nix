@@ -1,5 +1,6 @@
 { config, lib, ... }:
-{ imports = [
+{ 
+	imports = [
 		# Base settings
 		./autocommands.nix
 		./keys.nix
@@ -9,6 +10,7 @@
 		./plug/colorscheme/colorscheme.nix
 		# Completion and LSP
 		./plug/cmp/blink.nix
+		./plug/cmp/snippets.nix
 		./plug/lsp/lsp.nix
 		./plug/lsp/lspsaga.nix
 		./plug/lsp/clangd-extensions.nix
@@ -31,6 +33,7 @@
 		./plug/ui/ufo.nix
 		./plug/ui/dap-ui.nix
 		./plug/ui/dap-virtual-text.nix
+		./plug/ui/toggleterm.nix
 		# Utility Plugins
 		./plug/utils/dap.nix
 		./plug/utils/lz-n.nix
@@ -39,7 +42,7 @@
 		./plug/utils/comment.nix
 		./plug/utils/trouble.nix
 		./plug/utils/neo-tree.nix
-		./plug/utils/nvim-autopairs.nix
+		#./plug/utils/nvim-autopairs.nix
 		./plug/utils/undotree.nix
 		./plug/utils/compile.nix
 		./plug/utils/todo-comments.nix

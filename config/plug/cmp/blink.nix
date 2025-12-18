@@ -10,6 +10,7 @@
 		blink-cmp-git.enable = true;
 		blink-emoji.enable = true;
 		blink-ripgrep.enable = true;
+		blink-cmp-copilot.enable = true;
 		blink-cmp = {
 			enable = true;
 			setupLspCapabilities = true;
@@ -20,19 +21,35 @@
 				signature = {
 					enabled = true;
 				};
+				#snippets = {
+				#	preset = "luasnip";
+				#};
 
 				sources = {
 					default = [
 						"lsp" "buffer" "path" "snippets"
+						# AI agent
+						"copilot"
 						# Community
 						"dictionary" "emoji" /*"git"*/"spell" "ripgrep"
 					];
 					providers = {
+						copilot = {
+							name = "copilot";
+							module = "blink-cmp-copilot";
+							async = true;
+							score_offset = 600;
+						};
+						snippets = {
+							name = "snippets";
+							preset = "luasnip";
+							score_offset = 805;
+						};
 						lsp = {
 							name = "lsp";
 							enabled = true;
 							module = "blink.cmp.sources.lsp";
-							score_offset = 1000;
+							score_offset = 800;
 						};
 						dictionary = {
 							name = "Dict";
@@ -44,7 +61,7 @@
 							name = "Ripgrep";
 							enabled = true;
 							module = "blink-ripgrep";
-							score_offset = 900;
+							score_offset = 400;
 						};
 						/*git = {
 							module = "blink-cmp-git";
@@ -62,13 +79,11 @@
 							name = "Spell";
 							enabled = true;
 							module = "blink-cmp-spell";
-							score_offset = 50;
 						};
 						emoji = {
 							name = "Emoji";
 							enabled = true;
 							module = "blink-emoji";
-							score_offset = 1;
 						};
 					};
 				};

@@ -63,10 +63,10 @@
 			mode = "n"; key = "N"; action = "Nzzzv";
 			options = { desc = "Allow search terms to stay in the middle "; };
 		}
-		{
-			mode = "t"; key = "<Esc>"; action = "<C-\\><C-n>";
-			options = { noremap = true; silent = true; };
-		}
+		#{
+		#	mode = "t"; key = "<Esc>"; action = "<C-\\><C-n>";
+		#	options = { noremap = true; silent = true; };
+		#}
 		{
 			mode = "n"; key = "<leader>R"; action = ":%s/\<C-r><C-w>//g<Left><Left>";
 			options = { desc = "Search and replace word under cursor"; };

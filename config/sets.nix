@@ -26,10 +26,10 @@
 			relativenumber = true;
 
 			# Set tabs to 8 chars
-			tabstop = 8;
-			shiftwidth = 8;
+			tabstop = 2;
+			shiftwidth = 2;
 			softtabstop = 0;
-			expandtab = false;
+			expandtab = true;
 
 			showtabline = 2;
 			# Enable auto indenting
@@ -59,7 +59,7 @@
 			grepformat = "%f:%l:%c:%m";
 
 			# Decrease updatetime
-			updatetime = 50; # faster completion (4000ms default)
+			updatetime = 200; # faster completion (4000ms default)
 
 			# Set completeopt to have a better completion experience
 			completeopt = [
@@ -100,8 +100,8 @@
 			# Place a column line
 			colorcolumn = "120";
 
-			# Reduce which-key timeout to 10ms
-			timeoutlen = 10;
+			# Reduce which-key timeout to 100ms
+			timeoutlen = 100;
 
 			# Set encoding type
 			encoding = "utf-8";

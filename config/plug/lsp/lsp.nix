@@ -1,5 +1,8 @@
-{self, ...}:
+{config, pkgs, lib, ...}:
 {
+    extraPackages = lib.mkIf config.plugins.dap.enable (
+	with pkgs; [ omnisharp-roslyn ]
+    );
 	plugins = {
 		lsp = {
 			enable = true;
@@ -38,6 +41,20 @@
 									Designators = true;
 								};
 							};
+						};
+					};
+				};
+				omnisharp = {
+					enable = true;
+					autostart = true;
+					cmd = [
+						"OmniSharp"
+						"--languageserver"
+					];
+					settings = {
+						roslynExtensionOptions = {
+							enableAnalyzerSupport = true;
+							enableImportCompletion = true;
 						};
 					};
 				};

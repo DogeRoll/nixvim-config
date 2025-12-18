@@ -6,6 +6,8 @@
 	[
 	    coreutils
 	    lldb
+
+	    netcoredbg
 	]
 	++ lib.optionals stdenv.hostPlatform.isLinux [
 	    gdb
@@ -141,6 +143,13 @@
 		    lldb = {
 			command = lib.getExe' pkgs.lldb "lldb-dap";
 		    };
+
+		    netcoredbg = {
+			command = "netcoredbg";
+			args = [
+			    "--interpreter=vscode"
+			];
+		    };
 		};
 
 		servers = {
@@ -191,6 +200,17 @@
 			cwd = ''''${workspaceFolder}'';
 			stopOnEntry = false;
 		    };
+
+		    netcoredbg-config = {
+			name = "Launch (Netcoredbg)";
+			type = "netcoredbg";
+			request = "launch";
+			program.__raw = ''
+			function()
+				return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+		        end
+			'';
+		    };
 		in
 		    {
 		    c = [
@@ -207,6 +227,10 @@
 			++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
 			    gdb-config
 			];
+
+		    cs = [
+			netcoredbg-config
+		    ];
 
 		    rust = lib.mkIf (!config.plugins.rustaceanvim.enable) (
 			[

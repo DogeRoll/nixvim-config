@@ -12,6 +12,7 @@
 			};
 			ensureInstalled = [
 				"c"
+				"c_sharp"
 				"make"
 				"bash"
 				"diff"
@@ -28,6 +29,7 @@
 
 		grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
 			c
+			c_sharp
 			make
 			bash
 			diff
