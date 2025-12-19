@@ -33,7 +33,6 @@
 		./plug/ui/ufo.nix
 		./plug/ui/dap-ui.nix
 		./plug/ui/dap-virtual-text.nix
-		./plug/ui/toggleterm.nix
 		# Utility Plugins
 		./plug/utils/dap.nix
 		./plug/utils/lz-n.nix
@@ -46,6 +45,7 @@
 		./plug/utils/undotree.nix
 		./plug/utils/compile.nix
 		./plug/utils/todo-comments.nix
+		./plug/utils/toggleterm.nix
 		
 		./plug/snacks/default.nix
 		./plug/mini/default.nix

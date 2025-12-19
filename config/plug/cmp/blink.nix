@@ -42,7 +42,6 @@
 						};
 						snippets = {
 							name = "snippets";
-							preset = "luasnip";
 							score_offset = 805;
 						};
 						lsp = {
