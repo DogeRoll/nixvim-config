@@ -21,9 +21,9 @@
 				signature = {
 					enabled = true;
 				};
-				#snippets = {
-				#	preset = "luasnip";
-				#};
+				snippets = {
+					preset = "luasnip";
+				};
 
 				sources = {
 					default = [

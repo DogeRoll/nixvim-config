@@ -1,7 +1,7 @@
 {
   plugins = {
     clangd-extensions = {
-      enable = true;
+      enable = false;
       enableOffsetEncodingWorkaround = true;
       settings = {
         inlayHints.showParameterHints = true;

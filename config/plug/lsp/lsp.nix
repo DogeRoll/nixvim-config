@@ -1,8 +1,5 @@
 {config, pkgs, lib, ...}:
 {
-    extraPackages = lib.mkIf config.plugins.dap.enable (
-	with pkgs; [ omnisharp-roslyn ]
-    );
 	plugins = {
 		lsp = {
 			enable = true;
@@ -11,6 +8,7 @@
 				clangd = {
 					enable = true;
 					autostart = true;
+					package = null;
 					settings.init_options = {
 						usePlaceholders = true;
 						completeUnimported = true;
@@ -47,6 +45,7 @@
 				omnisharp = {
 					enable = true;
 					autostart = true;
+					package = null;
 					cmd = [
 						"OmniSharp"
 						"--languageserver"
