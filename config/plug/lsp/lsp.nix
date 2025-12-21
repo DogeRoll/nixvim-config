@@ -1,5 +1,11 @@
 {config, pkgs, lib, ...}:
 {
+	extraPackages = lib.mkIf config.plugins.lsp.enable (with pkgs; [
+		clang-tools
+		omnisharp-roslyn
+		#cmake-language-server
+	]);
+
 	plugins = {
 		lsp = {
 			enable = true;
@@ -8,7 +14,6 @@
 				clangd = {
 					enable = true;
 					autostart = true;
-					package = null;
 					settings.init_options = {
 						usePlaceholders = true;
 						completeUnimported = true;
@@ -45,7 +50,6 @@
 				omnisharp = {
 					enable = true;
 					autostart = true;
-					package = null;
 					cmd = [
 						"OmniSharp"
 						"--languageserver"
