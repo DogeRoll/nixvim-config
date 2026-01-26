@@ -25,6 +25,8 @@
 			number = true;
 			relativenumber = true;
 
+			background = "dark";
+
 			# Set tabs to 8 chars
 			tabstop = 2;
 			shiftwidth = 2;
