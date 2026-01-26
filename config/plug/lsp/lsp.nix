@@ -2,6 +2,7 @@
 {
 	extraPackages = lib.mkIf config.plugins.lsp.enable (with pkgs; [
 		clang-tools
+		zls
 		omnisharp-roslyn
 		#cmake-language-server
 	]);
@@ -60,6 +61,9 @@
 							enableImportCompletion = true;
 						};
 					};
+				};
+				zls = {
+					enable = true;
 				};
 				rust_analyzer = {
 					enable = false;

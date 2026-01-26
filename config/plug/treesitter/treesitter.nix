@@ -24,6 +24,7 @@
 				"markdown"
 				"markdown_inline"
 				"doxygen"
+				"zig"
 			];
 		};
 

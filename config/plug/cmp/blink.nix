@@ -28,27 +28,19 @@
 				sources = {
 					default = [
 						"lsp" "buffer" "path" "snippets"
-						# AI agent
-						"copilot"
 						# Community
 						"dictionary" "emoji" /*"git"*/"spell" "ripgrep"
 					];
 					providers = {
-						copilot = {
-							name = "copilot";
-							module = "blink-cmp-copilot";
-							async = true;
-							score_offset = 600;
-						};
 						snippets = {
 							name = "snippets";
-							score_offset = 805;
+							# score_offset = 805;
 						};
 						lsp = {
 							name = "lsp";
 							enabled = true;
 							module = "blink.cmp.sources.lsp";
-							score_offset = 800;
+							# score_offset = 800;
 						};
 						dictionary = {
 							name = "Dict";
@@ -60,7 +52,7 @@
 							name = "Ripgrep";
 							enabled = true;
 							module = "blink-ripgrep";
-							score_offset = 400;
+							# score_offset = 400;
 						};
 						/*git = {
 							module = "blink-cmp-git";
